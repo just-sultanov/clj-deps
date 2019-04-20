@@ -1,21 +1,29 @@
+clean:
+		mvn clean
+
+
 repl:
 		clojure -A:repl
 
 
 test:
-		clojure -A:test
-
-
-build:
-		clojure -A:build
+		mvn test
 
 
 pom:
 		clojure -Spom
 
 
+bump:
+		./script/bump
+
+
+build:
+		mvn package
+
+
 deploy:
 		mvn deploy
 
 
-.PHONY: repl test build pom deploy
+.PHONY: clean repl test pom bump build deploy

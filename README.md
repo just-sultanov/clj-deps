@@ -4,7 +4,7 @@
 
 # clj-deps
 
-Part of [org.clojure/tools.deps.alpha](https://github.com/clojure/tools.deps.alpha) library (`add-lib` branch)
+Part of [org.clojure/tools.deps.alpha](https://github.com/clojure/tools.deps.alpha) library (from `add-lib` branch)
 
 
 #### Quick Start Guide
@@ -13,10 +13,10 @@ Add the following project dependency:
 
 ```clojure
 ;; project.clj or build.boot
-[clj-deps "0.2.1"]
+[clj-deps "0.3.0-alpha"]
 
 ;; deps.edn
-{:deps {clj-deps {:mvn/version "0.2.1"}}}
+{:deps {clj-deps {:mvn/version "0.3.0-alpha"}}}
 ```
 
 #### Usage
