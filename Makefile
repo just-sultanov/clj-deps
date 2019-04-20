@@ -18,12 +18,12 @@ bump:
 		./script/build/bump
 
 
-build: test
-		mvn package
+build:
+		mvn clean package
 
 
-deploy: build
-		mvn deploy
+deploy:
+		mvn clean deploy
 
 
 .PHONY: clean repl test pom bump build deploy
