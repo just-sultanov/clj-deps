@@ -1,11 +1,8 @@
 {:paths   ["src/main/clojure" "src/test/clojure"]
 
  :deps    {org.clojure/clojure          {:mvn/version "1.10.1-beta2"}
-           org.clojure/tools.deps.alpha {:mvn/version "0.6.496" :exclusions [org.slf4j/slf4j-nop]}}
+           org.clojure/tools.deps.alpha {:mvn/version "0.6.496"}}
 
  :aliases {:repl {:extra-deps {nrepl                      {:mvn/version "0.6.0"}
                                com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
-                  :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}
-
-           :test {:extra-deps {lambdaisland/kaocha {:mvn/version "0.0-418"}}
-                  :main-opts  ["--main" "kaocha.runner"]}}}
+                  :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}}}

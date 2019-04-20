@@ -3,26 +3,26 @@ clean:
 
 
 repl:
-		clojure -A:repl
+		clj -A:repl
 
 
-test:
+test: clean
 		mvn test
 
 
 pom:
-		clojure -Spom
+		clj -Spom
 
 
 bump:
 		./script/build/bump
 
 
-build:
+build: test
 		mvn package
 
 
-deploy:
+deploy: build
 		mvn deploy
 
 
