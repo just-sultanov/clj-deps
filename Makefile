@@ -1,17 +1,17 @@
 repl:
-		clj -A:repl
+		clojure -A:repl
 
 
 test:
-		clj -A:test
+		clojure -A:test
 
 
 build:
-		clj -A:build
+		clojure -A:build
 
 
 pom:
-		clj -Spom
+		clojure -Spom
 
 
 deploy:
