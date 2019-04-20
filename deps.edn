@@ -16,7 +16,6 @@
 
              :build {:extra-deps {cambada {:mvn/version "1.0.3"}}
                      :main-opts  ["--main" "cambada.uberjar"
-                                  "--app-group-id" "clj-deps"
                                   "--app-artifact-id" "clj-deps"
-                                  "--app-version" "0.2.0"
-                                  "--no-copy-source"]}}}
+                                  "--app-version" "0.2.1"
+                                  "--copy-source"]}}}
