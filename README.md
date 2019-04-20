@@ -13,10 +13,10 @@ Add the following project dependency:
 
 ```clojure
 ;; project.clj or build.boot
-[clj-deps "0.1.1-alpha"]
+[clj-deps "0.2.0"]
 
 ;; deps.edn
-{:deps {clj-deps {:mvn/version "0.1.1-alpha"}}}
+{:deps {clj-deps {:mvn/version "0.2.0"}}}
 ```
 
 #### Usage

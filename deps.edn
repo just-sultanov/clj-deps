@@ -18,5 +18,5 @@
                      :main-opts  ["--main" "cambada.uberjar"
                                   "--app-group-id" "clj-deps"
                                   "--app-artifact-id" "clj-deps"
-                                  "--app-version" "0.1.1-alpha"
+                                  "--app-version" "0.2.0"
                                   "--no-copy-source"]}}}
