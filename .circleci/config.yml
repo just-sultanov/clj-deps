@@ -2,13 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/clojure:openjdk-11-tools-deps
+      - image: maven:3.6.1-jdk-11-slim
     working_directory: ~/clj-deps
     steps:
       - checkout
       - run:
-          name: Install make
-          command: sudo apt-get install make
-      - run:
           name: Run tests
-          command: make test
+          command: mvn test
