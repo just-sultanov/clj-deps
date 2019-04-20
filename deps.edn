@@ -1,19 +1,22 @@
-{:paths   ["src"]
+{:paths     ["src"]
 
- :deps    {org.clojure/clojure          {:mvn/version "1.10.1-beta2"}
-           org.clojure/tools.deps.alpha {:mvn/version "0.6.496"}}
+ :deps      {org.clojure/clojure          {:mvn/version "1.10.1-beta2"}
+             org.clojure/tools.deps.alpha {:mvn/version "0.6.496"}}
 
- :aliases {:repl  {:extra-deps {nrepl                      {:mvn/version "0.6.0"}
-                                com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
-                   :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}
+ :mvn/repos {"clojars" {:url "https://repo.clojars.org/"}
+             "central" {:url "https://repo1.maven.org/maven2/"}}
 
-           :test  {:extra-deps  {lambdaisland/kaocha {:mvn/version "0.0-418"}}
-                   :extra-paths ["test"]
-                   :main-opts   ["--main" "kaocha.runner"]}
+ :aliases   {:repl  {:extra-deps {nrepl                      {:mvn/version "0.6.0"}
+                                  com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
+                     :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}
 
-           :build {:extra-deps {cambada {:mvn/version "1.0.3"}}
-                   :main-opts  ["--main" "cambada.uberjar"
-                                "--app-group-id" "clj-deps"
-                                "--app-artifact-id" "clj-deps"
-                                "--app-version" "0.1.0-alpha"
-                                "--no-copy-source"]}}}
+             :test  {:extra-deps  {lambdaisland/kaocha {:mvn/version "0.0-418"}}
+                     :extra-paths ["test"]
+                     :main-opts   ["--main" "kaocha.runner"]}
+
+             :build {:extra-deps {cambada {:mvn/version "1.0.3"}}
+                     :main-opts  ["--main" "cambada.uberjar"
+                                  "--app-group-id" "clj-deps"
+                                  "--app-artifact-id" "clj-deps"
+                                  "--app-version" "0.1.1-alpha"
+                                  "--no-copy-source"]}}}
