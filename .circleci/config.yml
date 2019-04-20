@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/clojure:openjdk-11-tools-deps
+    working_directory: ~/clj-deps
+    steps:
+      - checkout
+      - run:
+          name: Install make
+          command: sudo apt-get install make
+      - run:
+          name: Run tests
+          command: make test
