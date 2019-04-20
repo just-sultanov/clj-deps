@@ -13,10 +13,10 @@ Add the following project dependency:
 
 ```clojure
 ;; project.clj or build.boot
-[clj-deps "0.3.0-alpha"]
+[clj-deps "0.3.7"]
 
 ;; deps.edn
-{:deps {clj-deps {:mvn/version "0.3.0-alpha"}}}
+{:deps {clj-deps {:mvn/version "0.3.7"}}}
 ```
 
 #### Usage
@@ -43,6 +43,7 @@ Add the following project dependency:
 
 
 #### Deployment
+    $ make bump
     $ make build
     $ make deploy
 
