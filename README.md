@@ -25,16 +25,32 @@ Add the following project dependency:
 (ns example
   (:require [clj-deps.core :as deps]))
 
-;; load library from git
-(deps/add-lib 'commons-lang {:git/url "https://github.com/apache/commons-lang.git"
-                             :sha     "c21484b730221bc87ca26553155350292aa30f0d"})
-;; => true                             
-          
-          
-;; load library from maven                   
-(deps/add-lib 'org.clojure/core.memoize {:mvn/version "0.7.1"})                             
+;; load library from git by https
+(deps/add-lib 'org.apache.commons/commons-lang3 {:git/url "https://github.com/apache/commons-lang.git"
+                                                 :sha     "c21484b730221bc87ca26553155350292aa30f0d"})
 ;; => true
 
+
+;; load library from git by ssh
+(deps/add-lib 'org.apache.commons/commons-lang3 {:git/url "git@github.com:apache/commons-lang.git"
+                                                 :sha     "c21484b730221bc87ca26553155350292aa30f0d"})
+;; => true
+
+
+;; load library from maven
+(deps/add-lib 'org.clojure/core.memoize {:mvn/version "0.7.1"})  
+;; => true
+
+
+;; load library from your own repository
+(deps/add-lib 'group-id/artifact-id {:mvn/version "1.2.3"}
+                                    {:mvn/repos {"repo-name" {:url "https://repo.org"}}})
+;; => true
+
+
+;; load library from local root
+(deps/add-lib 'group-id/artifact-id {:local/root "/path/to/file.jar"})                             
+;; => true
 ```
 
 #### Development
