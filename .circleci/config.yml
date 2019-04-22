@@ -5,23 +5,22 @@ jobs:
       - image: maven:3.6.1-jdk-11-slim
     working_directory: ~/repo
     steps:
-      - checkout
-      - add_ssh_keys
       - run:
           name: Update image
           command: apt-get update
       - run:
-          name: Install ssh
+          name: Install `ssh`
           command: apt-get -yqq install ssh
       - run:
           name: Create `.ssh` directory
           command: mkdir ~/.ssh
       - run:
-          name: Add `known_hosts`
+          name: Touch `known_hosts`
           command: touch ~/.ssh/known_hosts
       - run:
           name: Add `github.com` to `known_hosts`
           command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+      - checkout
       - run:
           name: Run tests
           command: mvn test
