@@ -6,6 +6,13 @@ jobs:
     working_directory: ~/clj-deps
     steps:
       - checkout
+      - add_ssh_keys
+      - run:
+          name: Create `.ssh` directory
+          command: mkdir ~/.ssh
+      - run:
+          name: Add `github.com` to `known_hosts`
+          command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
       - run:
           name: Run tests
           command: mvn test
