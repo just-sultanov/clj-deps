@@ -3,8 +3,8 @@
             [clj-deps.core :as sut]))
 
 (deftest test-add-lib
-  (testing "should be added java library from git by https"
-    (let [added? (sut/add-lib 'org.apache.commons/commons-lang3 {:git/url "https://github.com/apache/commons-lang.git"
+  (testing "should be added java library from git by ssh"
+    (let [added? (sut/add-lib 'org.apache.commons/commons-lang3 {:git/url "git@github.com:apache/commons-lang.git"
                                                                  :sha     "c21484b730221bc87ca26553155350292aa30f0d"})]
       (is (true? added?))))
 
