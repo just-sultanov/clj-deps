@@ -12,6 +12,3 @@ jobs:
       - run:
           name: Run tests
           command: mvn test
-notify:
-  webhooks:
-    - url: https://coveralls.io/webhook?repo_token=${COVERALLS_REPO_TOKEN}

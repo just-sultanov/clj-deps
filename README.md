@@ -1,6 +1,5 @@
 [![Clojars Project](https://img.shields.io/clojars/v/clj-deps.svg)](https://clojars.org/clj-deps)
 [![CircleCI Status](https://circleci.com/gh/just-sultanov/clj-deps.svg?style=shield)](https://circleci.com/gh/just-sultanov/clj-deps)
-[![Coverage Status](https://coveralls.io/repos/github/just-sultanov/clj-deps/badge.svg?branch=master)](https://coveralls.io/github/just-sultanov/clj-deps?branch=master)
 [![GitHub License](https://img.shields.io/badge/license-EPL-green.svg)](https://github.com/just-sultanov/clj-deps/blob/master/LICENSE)
 
 # clj-deps
