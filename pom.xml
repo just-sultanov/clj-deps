@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>clj-deps</groupId>
   <artifactId>clj-deps</artifactId>
-  <version>0.3.29</version>
+  <version>0.3.31-SNAPSHOT</version>
   <name>clj-deps</name>
   <description>Part of `org.clojure/tools.deps.alpha` library (from `add-lib` branch)</description>
   <url>https://github.com/just-sultanov/clj-deps</url>
