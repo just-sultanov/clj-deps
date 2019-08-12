@@ -13,11 +13,13 @@ Add the following project dependency:
 
 ```clojure
 ;; project.clj or build.boot
-[clj-deps "0.3.29"]
+[clj-deps "0.3.31"]
 
 ;; deps.edn
-{:deps {clj-deps {:mvn/version "0.3.29"}}}
+{:deps {clj-deps {:mvn/version "0.3.31"}}}
 ```
+
+
 
 #### Usage
 
@@ -30,38 +32,45 @@ Add the following project dependency:
                                                  :sha     "c21484b730221bc87ca26553155350292aa30f0d"})
 ;; => true
 
-
 ;; load library from git by ssh
 (deps/add-lib 'org.apache.commons/commons-lang3 {:git/url "git@github.com:apache/commons-lang.git"
                                                  :sha     "c21484b730221bc87ca26553155350292aa30f0d"})
 ;; => true
 
-
 ;; load library from maven
 (deps/add-lib 'org.clojure/core.memoize {:mvn/version "0.7.1"})  
 ;; => true
-
 
 ;; load library from your own repository
 (deps/add-lib 'group-id/artifact-id {:mvn/version "1.2.3"}
                                     {:mvn/repos {"repo-name" {:url "https://repo.org"}}})
 ;; => true
 
-
 ;; load library from local root
 (deps/add-lib 'group-id/artifact-id {:local/root "/path/to/file.jar"})                             
 ;; => true
 ```
+
+
 
 #### Development
     $ make repl
     $ make test
 
 
+
 #### Deployment
     $ make bump
     $ make build
     $ make deploy
+
+
+
+#### Changelog
+
+##### v0.3.31
+- tools.deps.alpha library updated to [0.7.541](https://github.com/clojure/tools.deps.alpha/blob/master/CHANGELOG.md)
+
 
 
 #### License

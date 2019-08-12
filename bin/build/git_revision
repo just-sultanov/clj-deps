@@ -5,7 +5,7 @@
 
 set -e
 
-trunk_basis=`script/build/trunk_revision`
+trunk_basis=`bin/build/trunk_revision`
 sha=`git rev-parse HEAD`
 
 sha=${sha:0:${#sha}-34} # drop the last 34 characters, keep 6

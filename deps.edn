@@ -1,7 +1,7 @@
 {:paths   ["src/main/clojure" "src/test/clojure"]
 
  :deps    {org.clojure/clojure          {:mvn/version "1.10.1"}
-           org.clojure/tools.deps.alpha {:mvn/version "0.7.527"}}
+           org.clojure/tools.deps.alpha {:mvn/version "0.7.541"}}
 
  :aliases {:repl {:extra-deps {nrepl                      {:mvn/version "0.6.0"}
                                com.bhauman/rebel-readline {:mvn/version "0.1.4"}}

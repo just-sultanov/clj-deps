@@ -15,7 +15,7 @@ pom:
 
 
 bump:
-		./script/build/bump
+		./bin/build/bump
 
 
 build:

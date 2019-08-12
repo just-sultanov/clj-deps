@@ -10,7 +10,7 @@ version_template=`cat VERSION`
 
 if [[ "$version_template" =~ ^[0-9]+\.[0-9]+\.VERSION(-[a-zA-Z0-9]+)?$ ]]; then
 
-    git_revision=`script/build/git_revision`
+    git_revision=`bin/build/git_revision`
     echo ${version_template/VERSION/$git_revision}
 
 else
