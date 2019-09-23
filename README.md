@@ -13,10 +13,10 @@ Add the following project dependency:
 
 ```clojure
 ;; project.clj or build.boot
-[clj-deps "0.3.31"]
+[clj-deps "0.3.33"]
 
 ;; deps.edn
-{:deps {clj-deps {:mvn/version "0.3.31"}}}
+{:deps {clj-deps {:mvn/version "0.3.33"}}}
 ```
 
 
@@ -68,8 +68,11 @@ Add the following project dependency:
 
 #### Changelog
 
+##### v0.3.33
+- tools.deps.alpha library updated to [0.7.549][changelog]
+
 ##### v0.3.31
-- tools.deps.alpha library updated to [0.7.541](https://github.com/clojure/tools.deps.alpha/blob/master/CHANGELOG.md)
+- tools.deps.alpha library updated to [0.7.541][changelog]
 
 
 
@@ -78,3 +81,7 @@ Add the following project dependency:
 Copyright © 2019 Ilshat Sultanov
 
 Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+
+
+
+[changelog]: https://github.com/clojure/tools.deps.alpha/blob/master/CHANGELOG.md
