@@ -1,6 +1,7 @@
 (ns clj-deps.core-test
-  (:require [clojure.test :refer [deftest is testing]]
-            [clj-deps.core :as sut]))
+  (:require
+    [clojure.test :refer [deftest is testing]]
+    [clj-deps.core :as sut]))
 
 (deftest test-add-lib
   (testing "should be added java library from git by ssh"
@@ -10,7 +11,7 @@
 
   (testing "should be added clojure library from git by https"
     (let [added? (sut/add-lib 'cljdoc {:git/url "https://github.com/cljdoc/cljdoc.git"
-                                       :sha     "a24e762e0f3280ef9db95d6d4853a58d40e7dab9"})]
+                                       :sha     "4b3fe041ee3e35c937f2877f40209b4a62036bef"})]
       (is (true? added?))))
 
   (testing "should be added java library from maven"
@@ -18,5 +19,5 @@
       (is (true? added?))))
 
   (testing "should be added clojure library from maven"
-    (let [added? (sut/add-lib 'lambdaisland/kaocha {:mvn/version "0.0-418"})]
+    (let [added? (sut/add-lib 'lambdaisland/kaocha {:mvn/version "0.0-554"})]
       (is (true? added?)))))

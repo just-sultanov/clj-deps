@@ -1,8 +1,22 @@
-{:paths   ["src/main/clojure" "src/test/clojure"]
+{:paths   ["src"]
 
  :deps    {org.clojure/clojure          {:mvn/version "1.10.1"}
-           org.clojure/tools.deps.alpha {:mvn/version "0.7.549"}}
+           org.clojure/tools.deps.alpha {:mvn/version "0.8.578"}}
 
- :aliases {:repl {:extra-deps {nrepl                      {:mvn/version "0.6.0"}
-                               com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
-                  :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}}}
+ :aliases {:repl    {:extra-deps {nrepl                      {:mvn/version "0.6.0"}
+                                  com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
+                     :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}
+
+           :test    {:extra-deps  {lambdaisland/kaocha           {:mvn/version "0.0-554"}
+                                   lambdaisland/kaocha-cloverage {:mvn/version "0.0-41"}}
+                     :extra-paths ["test"]}
+
+           :build   {:extra-deps {seancorfield/depstar {:mvn/version "0.3.4"}}
+                     :main-opts  ["--main" "hf.depstar.jar" "target/clj-deps.jar"]}
+
+           :version {:extra-deps {com.workframe/garamond {:mvn/version "0.4.0"}}
+                     :main-opts  ["-m" "garamond.main"]}
+
+           :deploy  {:extra-deps {deps-deploy {:mvn/version "0.0.9"}}
+                     :main-opts  ["--main" "deps-deploy.deps-deploy"
+                                  "deploy" "target/clj-deps.jar"]}}}

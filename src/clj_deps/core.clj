@@ -11,15 +11,16 @@
 
   Original file:
   https://github.com/clojure/tools.deps.alpha/blob/add-lib/src/main/clojure/clojure/tools/deps/alpha/repl.clj"
-
-  (:require [clojure.java.io :as jio]
-            [clojure.set :as set]
-            [clojure.tools.deps.alpha :as deps]
-            [clojure.tools.deps.alpha.util.maven :as mvn]
-            [clj-deps.libmap :as libmap])
-  (:import (java.io File)
-           (java.net URL URLClassLoader)
-           (clojure.lang DynamicClassLoader)))
+  (:require
+    [clojure.java.io :as jio]
+    [clojure.set :as set]
+    [clojure.tools.deps.alpha :as deps]
+    [clojure.tools.deps.alpha.util.maven :as mvn]
+    [clj-deps.libmap :as libmap])
+  (:import
+    (java.io File)
+    (java.net URL URLClassLoader)
+    (clojure.lang DynamicClassLoader)))
 
 (set! *warn-on-reflection* true)
 

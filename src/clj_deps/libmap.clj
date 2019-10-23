@@ -11,12 +11,13 @@
 
   Original file:
   https://github.com/clojure/tools.deps.alpha/blob/add-lib/src/main/clojure/clojure/tools/deps/alpha/libmap.clj"
-
-  (:require [clojure.edn :as edn]
-            [clojure.java.io :as jio]
-            [clojure.string :as str]
-            [clojure.tools.deps.alpha.util.io :as uio])
-  (:import (java.io File)))
+  (:require
+    [clojure.edn :as edn]
+    [clojure.java.io :as jio]
+    [clojure.string :as str]
+    [clojure.tools.deps.alpha.util.io :as uio])
+  (:import
+    (java.io File)))
 
 (defn- read-libmap []
   (when-let [edn (System/getProperty "clojure.libmap")]
