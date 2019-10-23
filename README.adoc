@@ -92,9 +92,7 @@ help                           Show help
 repl                           Run nREPL
 clean                          Clean
 lint                           Run linter
-test-clj                       Run Clojure tests
-test-cljs                      Run ClojureScript tests
-test                           Run all tests
+test                           Run Clojure tests
 build                          Build jar
 init                           Init first version
 patch                          Increment patch version
