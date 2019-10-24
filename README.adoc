@@ -30,17 +30,16 @@ Add the following dependency in your project:
   (:require [clj-deps.core :as deps]))
 
 ;; load library from git by https
-(deps/add-lib 'org.apache.commons/commons-lang3 {:git/url "https://github.com/apache/commons-lang.git"
-                                                 :sha     "c21484b730221bc87ca26553155350292aa30f0d"})
-;; => true
+(deps/add-lib 'cljdoc {:git/url "https://github.com/cljdoc/cljdoc.git"
+                       :sha     "4b3fe041ee3e35c937f2877f40209b4a62036bef"})
 
 ;; load library from git by ssh
-(deps/add-lib 'org.apache.commons/commons-lang3 {:git/url "git@github.com:apache/commons-lang.git"
-                                                 :sha     "c21484b730221bc87ca26553155350292aa30f0d"})
+(deps/add-lib 'cljdoc {:git/url "git@github.com:cljdoc/cljdoc.git"
+                       :sha     "4b3fe041ee3e35c937f2877f40209b4a62036bef"})
 ;; => true
 
 ;; load library from maven
-(deps/add-lib 'org.clojure/core.memoize {:mvn/version "0.7.1"})
+(deps/add-lib 'add-lib 'org.yaml/snakeyaml {:mvn/version "1.25"})
 ;; => true
 
 ;; load library from your own repository
