@@ -102,6 +102,10 @@ deploy                         Deploy to clojars
 
 === Changelog
 
+===== v0.4.1
+
+* tools.deps.alpha library updated to https://github.com/clojure/tools.deps.alpha/blob/master/CHANGELOG.md[0.8.584]
+
 ===== v0.4.0
 
 * tools.deps.alpha library updated to https://github.com/clojure/tools.deps.alpha/blob/master/CHANGELOG.md[0.8.578]
