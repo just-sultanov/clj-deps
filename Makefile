@@ -4,6 +4,8 @@
 SHELL = bash
 
 SCM_URL="https://github.com/just-sultanov/clj-deps"
+GROUP_ID=clj-deps
+ARTIFACT_ID=clj-deps
 TAG_MSG="release a new version"
 
 help: ## Show help
@@ -18,7 +20,7 @@ clean: ## Clean
 	@echo "=================================================================="
 	@echo "Clean..."
 	@echo "=================================================================="
-	rm -f pom.xml && rm -rf target
+	rm -rf pom.xml clj-deps.jar target
 	@echo -e "\n"
 
 
@@ -43,12 +45,12 @@ build: ## Build jar
 	@echo "Build..."
 	@echo "=================================================================="
 	clojure -A:build
-	clojure -A:version --pom --scm-url ${SCM_URL}
+	clojure -A:version --pom --group-id ${GROUP_ID} --artifact-id ${ARTIFACT_ID} --scm-url ${SCM_URL}
 	@echo -e "\n"
 
 
 init: ## Init first version
-	git tag --annotate --message ${TAG_MSG} v0.1.0
+	git tag --annotate --message ${TAG_MSG} v0.0.1
 
 
 patch: ## Increment patch version
@@ -61,6 +63,14 @@ minor: ## Increment minor version
 
 major: ## Increment major version
 	clojure -A:version major --tag --message ${TAG_MSG}
+
+
+install: ## Install locally
+	@echo "=================================================================="
+	@echo "Install locally..."
+	@echo "=================================================================="
+	clojure -A:install
+	@echo -e "\n"
 
 
 deploy: ## Deploy to clojars

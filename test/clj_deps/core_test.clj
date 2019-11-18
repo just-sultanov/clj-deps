@@ -4,20 +4,12 @@
     [clj-deps.core :as sut]))
 
 (deftest test-add-lib
-  #_(testing "should be added java library from git by ssh"
-      (let [added? (sut/add-lib 'org.apache.commons/commons-lang3 {:git/url "git@github.com:apache/commons-lang.git"
-                                                                   :sha     "c21484b730221bc87ca26553155350292aa30f0d"})]
-        (is (true? added?))))
-
-  (testing "should be added java library from maven"
-    (let [added? (sut/add-lib 'org.yaml/snakeyaml {:mvn/version "1.25"})]
-      (is (true? added?))))
-
   (testing "should be added clojure library from git by https"
-    (let [added? (sut/add-lib 'cljdoc {:git/url "https://github.com/cljdoc/cljdoc.git"
-                                       :sha     "4b3fe041ee3e35c937f2877f40209b4a62036bef"})]
-      (is (true? added?))))
+    (is (sut/add-lib 'clj-helpers {:git/url "https://github.com/just-sultanov/clj-helpers.git"
+                                   :sha     "db6263b750a66c3f3df99e14a53ba9e416f34fa3"}))
+    (is (sut/add-lib 'clj-fsm {:git/url "https://github.com/just-sultanov/clj-fsm.git"
+                               :sha     "396f95a1f28a1fae7672bdf4793e9168abaf2990"})))
 
   (testing "should be added clojure library from maven"
-    (let [added? (sut/add-lib 'clj-fsm {:mvn/version "0.2.2"})]
-      (is (true? added?)))))
+    (is (true? (sut/add-lib 'clj-helpers {:mvn/version "0.2.0"})))
+    (is (true? (sut/add-lib 'clj-fsm {:mvn/version "0.2.2"})))))
