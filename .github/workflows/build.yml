@@ -1,11 +1,6 @@
 name: build
 
-on:
-  push:
-    paths:
-      - 'src/**'
-      - 'test/**'
-
+on: push
 
 jobs:
   lint:
