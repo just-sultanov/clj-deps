@@ -1,6 +1,8 @@
 .cpcache
 .idea
+out
 target
-*.iml
 .nrepl-port
+*.iml
+*.jar
 pom.xml
