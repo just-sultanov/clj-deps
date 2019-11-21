@@ -6,3 +6,4 @@ target
 *.iml
 *.jar
 pom.xml
+trace.edn
