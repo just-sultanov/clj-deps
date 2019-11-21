@@ -38,7 +38,7 @@ jobs:
       - name: Setup clojure
         uses: DeLaGuardo/setup-clojure@2.0
         with:
-          tools-deps: '1.10.1.483'
+          tools-deps: '1.10.1.489'
 
       - name: Run clean
         run: make clean
@@ -68,7 +68,7 @@ jobs:
       - name: Setup clojure
         uses: DeLaGuardo/setup-clojure@2.0
         with:
-          tools-deps: '1.10.1.483'
+          tools-deps: '1.10.1.489'
 
       - name: Run clean
         run: make clean
