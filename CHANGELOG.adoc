@@ -3,6 +3,10 @@
 
 == Changelog
 
+=== v0.4.6
+
+* tools.deps.alpha library updated to {tda-changelog}[0.8.624]
+
 === v0.4.5
 
 * tools.deps.alpha library updated to {tda-changelog}[0.8.599]
