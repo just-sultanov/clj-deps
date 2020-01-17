@@ -73,6 +73,13 @@ install: ## Install locally
 	@echo -e "\n"
 
 
+release: ## Release a new version
+	@echo "=================================================================="
+	@echo "Release a new version..."
+	@echo "=================================================================="
+	git push origin --tags
+
+
 deploy: ## Deploy to clojars
 	@echo "=================================================================="
 	@echo "Deploy..."
