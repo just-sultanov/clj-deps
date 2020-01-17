@@ -38,7 +38,7 @@ jobs:
       - name: Setup clojure
         uses: DeLaGuardo/setup-clojure@2.0
         with:
-          tools-deps: '1.10.1.489'
+          tools-deps: '1.10.1.492'
 
       - name: Run clean
         run: make clean
@@ -46,8 +46,11 @@ jobs:
       - name: Run tests
         run: make test
 
-      - name: Upload coverage
-        run: curl -s https://codecov.io/bash | bash -s -- -c -F aFlag -f ./target/coverage/codecov.json
+      - name: Upload coverage to codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./target/coverage/codecov.json
 
 
   deploy:
@@ -68,7 +71,7 @@ jobs:
       - name: Setup clojure
         uses: DeLaGuardo/setup-clojure@2.0
         with:
-          tools-deps: '1.10.1.489'
+          tools-deps: '1.10.1.492'
 
       - name: Run clean
         run: make clean
