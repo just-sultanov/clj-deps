@@ -1,18 +1,18 @@
 {:paths   ["src"]
 
  :deps    {org.clojure/clojure          {:mvn/version "1.10.1"}
-           org.clojure/tools.deps.alpha {:mvn/version "0.8.599"}
+           org.clojure/tools.deps.alpha {:mvn/version "0.8.624"}
            javax.xml.bind/jaxb-api      {:mvn/version "2.3.1"}
            org.clojure/core.rrb-vector  {:mvn/version "0.1.1"}}
 
  :aliases {:repl    {:extra-deps {nrepl {:mvn/version "0.6.0"}}
                      :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}
 
-           :test    {:extra-deps  {lambdaisland/kaocha           {:mvn/version "0.0-554"}
+           :test    {:extra-deps  {lambdaisland/kaocha           {:mvn/version "0.0-573"}
                                    lambdaisland/kaocha-cloverage {:mvn/version "0.0-41"}}
                      :extra-paths ["test"]}
 
-           :build   {:extra-deps {seancorfield/depstar {:mvn/version "0.3.4"}}
+           :build   {:extra-deps {seancorfield/depstar {:mvn/version "0.5.2"}}
                      :main-opts  ["--main" "hf.depstar.jar" "clj-deps.jar"]}
 
            :version {:extra-deps {com.workframe/garamond {:mvn/version "0.4.0"}}
