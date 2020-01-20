@@ -1,7 +1,10 @@
 :tda-changelog: https://github.com/clojure/tools.deps.alpha/blob/master/CHANGELOG.md
 
-
 == Changelog
+
+=== v0.4.7
+
+* tools.deps.alpha library updated to {tda-changelog}[0.8.633]
 
 === v0.4.6
 
