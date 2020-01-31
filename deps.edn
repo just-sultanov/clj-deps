@@ -1,14 +1,14 @@
 {:paths   ["src"]
 
  :deps    {org.clojure/clojure          {:mvn/version "1.10.1"}
-           org.clojure/tools.deps.alpha {:mvn/version "0.8.633"}
+           org.clojure/tools.deps.alpha {:mvn/version "0.8.661"}
            javax.xml.bind/jaxb-api      {:mvn/version "2.3.1"}
            org.clojure/core.rrb-vector  {:mvn/version "0.1.1"}}
 
  :aliases {:repl    {:extra-deps {nrepl {:mvn/version "0.6.0"}}
                      :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}
 
-           :test    {:extra-deps  {lambdaisland/kaocha           {:mvn/version "0.0-573"}
+           :test    {:extra-deps  {lambdaisland/kaocha           {:mvn/version "0.0-581"}
                                    lambdaisland/kaocha-cloverage {:mvn/version "0.0-41"}}
                      :extra-paths ["test"]}
 
@@ -16,12 +16,10 @@
                      :main-opts  ["--main" "hf.depstar.jar" "clj-deps.jar"]}
 
            :version {:extra-deps {com.workframe/garamond {:mvn/version "0.4.0"}}
-                     :main-opts  ["-m" "garamond.main"]}
+                     :main-opts  ["--main" "garamond.main"]}
 
            :install {:extra-deps {deps-deploy {:mvn/version "0.0.9"}}
-                     :main-opts  ["-m" "deps-deploy.deps-deploy"
-                                  "install" "clj-deps.jar"]}
+                     :main-opts  ["--main" "deps-deploy.deps-deploy" "install" "clj-deps.jar"]}
 
            :deploy  {:extra-deps {deps-deploy {:mvn/version "0.0.9"}}
-                     :main-opts  ["--main" "deps-deploy.deps-deploy"
-                                  "deploy" "clj-deps.jar"]}}}
+                     :main-opts  ["--main" "deps-deploy.deps-deploy" "deploy" "clj-deps.jar"]}}}
