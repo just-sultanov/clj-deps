@@ -13,7 +13,8 @@ jobs:
           clj-kondo-args: --lint src:test
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-  build:
+
+  test:
     needs: lint
     runs-on: ubuntu-latest
     strategy:
@@ -47,6 +48,3 @@ jobs:
 
       - name: Run tests
         run: make test
-
-      - name: Run build
-        run: make build
