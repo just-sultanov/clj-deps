@@ -1,14 +1,14 @@
 {:paths   ["src"]
 
  :deps    {org.clojure/clojure          {:mvn/version "1.10.1"}
-           org.clojure/tools.deps.alpha {:mvn/version "0.8.661"}
+           org.clojure/tools.deps.alpha {:mvn/version "0.8.666"}
            javax.xml.bind/jaxb-api      {:mvn/version "2.3.1"}
            org.clojure/core.rrb-vector  {:mvn/version "0.1.1"}}
 
  :aliases {:repl    {:extra-deps {nrepl {:mvn/version "0.6.0"}}
                      :main-opts  ["--main" "nrepl.cmdline" "--port" "7888"]}
 
-           :test    {:extra-deps  {lambdaisland/kaocha           {:mvn/version "0.0-581"}
+           :test    {:extra-deps  {lambdaisland/kaocha           {:mvn/version "0.0-590"}
                                    lambdaisland/kaocha-cloverage {:mvn/version "0.0-41"}}
                      :extra-paths ["test"]}
 
